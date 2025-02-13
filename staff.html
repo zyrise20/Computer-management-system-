@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+    <script src="staff.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <li><a href="history.html">History</a></li>
+        <li>Inventory</li>
+        <li><a href="report.html">Report</a></li>
+        <p><a href="index.html">HOME</a></p>
+    </header>
+
+    <div class="container">
+
+        <h1>Computer Lab Inventory</h1>
+
+        <!-- Add New PC Section -->
+        <div class="add-pc">
+            <h3>Add a New PC</h3>
+            <input type="text" id="newPcName" placeholder="Enter PC Name (e.g., PC5)">
+            <button onclick="addNewPc()">Add PC</button>
+        </div>
+
+        <button id="saveToReportButton">Save to Report</button>
+        <button id="clearHistoryButton">Clear History</button>
+        <br><br>
+        
+        <!-- Add Item Section -->
+        <div class="add-item">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <select id="itemStatus">
+                <option value="Working">Working</option>
+                <option value="Not Working">Not Working</option>
+                <option value="Missing">Missing</option>
+            </select>
+            <select id="pcNumber">
+                <!-- Dropdown will dynamically populate PCs -->
+            </select>
+            <button onclick="addItem()">Add Item</button>
+        </div>
+
+        <!-- Dynamic Tables -->
+        <div id="pcTables"></div>
+    </div>
+
+</body>
+</html>
